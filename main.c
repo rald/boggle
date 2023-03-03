@@ -300,7 +300,7 @@ void parsein(IrcMsg *im) {
 		privmsg(sck,chn,GAME_TITLE" top10: %s",msg);
 	} else if(!strcmp(msg,".time")) {
 		if(gameState==GAMESTATE_START) {
-			notice(sck,im->usr,GAME_TITLE" %s: time left %zu",im->usr,allottedTime-elapsedTime);
+			notice(sck,im->usr,GAME_TITLE" %s: time left %zu secs",im->usr,allottedTime-elapsedTime);
 		} else {
 			notice(sck,im->usr,GAME_TITLE" %s: game is not started",im->usr);
 		}			
